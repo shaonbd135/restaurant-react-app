@@ -1,0 +1,53 @@
+.logo {
+    width: 160px;
+    margin-left: 50px;
+    margin-right: 40px;
+}
+
+.signUpBtn {
+    border-radius: 20px;
+    margin-right: 30px;
+}
+
+.banner {
+    width: 100%;
+    height: 400px;
+}
+
+.hero-area {
+    background-image: url('https://i.ibb.co/3y5kWz4/bannerbackground.png');
+    width: device-width;
+    height: 400px;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+}
+
+/* 
+
+For center single button
+ <input className='banner-text' type="button" value="Get Started" /> 
+
+.banner-text {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: relative;
+} 
+
+*/
+
+.banner-area {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
