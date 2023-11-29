@@ -1,0 +1,32 @@
+.checkout-page{
+    padding: 20px;   
+    background-color: #FFFEFA;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+}
+
+.checkout-product {
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    justify-content: space-between;
+    text-align: center;
+    border: 1px solid lightgray;
+    margin-right: 10px;
+}
+
+.checkout-product img{
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-top: 5px;
+}
+.order{
+    border-right: 1px solid lightgray;
+}
+
+.checkout-form{
+    margin-top: 20px;
+    border: 1px solid lightgray;
+    padding: 20px;
+}

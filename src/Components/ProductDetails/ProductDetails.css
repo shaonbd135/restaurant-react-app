@@ -1,0 +1,17 @@
+.product-details-card-style{
+    border: none !important;
+    box-shadow: 5px 5px 10px gray;
+    text-align: center;
+    margin: auto;
+    margin-top: 50px;
+
+}
+
+.product-details-side-card-style{
+    border: none !important;
+    text-align: center;
+    margin: auto;
+    margin-top: 50px;
+    
+}
+

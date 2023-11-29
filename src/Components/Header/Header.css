@@ -15,9 +15,9 @@
 }
 
 .hero-area {
-    background-image: url('https://i.ibb.co/3y5kWz4/bannerbackground.png');
+    background-image: url('https://i.ibb.co/hDS3sT5/various-vegetables-black-table-with-space-message.jpg');
     width: device-width;
-    height: 400px;
+    height: 250px;
     background-repeat: no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -28,20 +28,6 @@
 
 }
 
-/* 
-
-For center single button
- <input className='banner-text' type="button" value="Get Started" /> 
-
-.banner-text {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    position: relative;
-} 
-
-*/
-
 .banner-area {
     margin: 0;
     position: absolute;
@@ -51,3 +37,4 @@ For center single button
     transform: translate(-50%, -50%);
     text-align: center;
 }
+

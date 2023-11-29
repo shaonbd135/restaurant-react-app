@@ -1,0 +1,31 @@
+
+/* ...............css for HomePage Carousel........... */
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #000;
+    /* Replace with the color you want */
+    color: #000;
+    /* Change the arrow color to white or a color that contrasts well with your background */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+    /* Adjust the width of the arrow */
+}
+
+ /*   ...............css for HomePage bottom Banner........... */
+.cover-container {
+    margin-top: 20px;
+    text-align: center;
+    justify-content: center;
+    border-top: 1px solid lightgray;
+    padding: 10px;
+    border-radius: 10px;
+
+}
+
+.cover-image {
+    width: 100%
+}
