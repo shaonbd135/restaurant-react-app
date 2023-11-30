@@ -36,7 +36,7 @@ const NavHero = () => {
                     <Container fluid >
 
                         {/* it's a logo on the left side of the navbar, you can change it to your logo */}
-                        <img className='logo' src="https://i.ibb.co/tsvcp1y/logo2.png" alt="" />
+                        <img className='logo' src="https://i.ibb.co/bBK2g34/Abstract-Chef-Cooking-Restaurant-Free-Logo-1.png" alt="" />
 
                         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                         <Navbar.Collapse id="responsive-navbar-nav">
@@ -47,6 +47,7 @@ const NavHero = () => {
                                 <Nav.Link > <NavLink className='nav-link' to='/'> Home</NavLink> </Nav.Link>
                                 <Nav.Link > <NavLink className='nav-link' to='about-us'> About Us</NavLink> </Nav.Link>
                                 <Nav.Link > <NavLink className='nav-link' to='contact-us'> Contact Us</NavLink> </Nav.Link>
+                                <Nav.Link > <NavLink className='nav-link' to='shop'> All Food Items</NavLink> </Nav.Link>
                             </Nav>
                             <Nav>
                                 {/* it's a cart icon (Bootstrap Icons) with badge on the right side of the navbar */}

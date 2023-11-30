@@ -95,6 +95,7 @@ const CheckoutPage = () => {
 
                                 })
                             }
+
                         </Col>
                     </Row>
                 </Col>

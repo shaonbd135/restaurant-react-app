@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import './ProductDetails.css'
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import FakeDataBase from '../../FakeDataBase/FakeDataBase';
-import { Button, Card, Col, Container, Row } from 'react-bootstrap';
+import { Button, Card, Col, Container, Image, Row } from 'react-bootstrap';
 import { Cart3 } from 'react-bootstrap-icons';
 import { Context } from '../../App';
 
@@ -42,11 +42,11 @@ const ProductDetails = () => {
     }
 
     return (
-        <Container>
+        <Container className='product-details-container' >
             <Row>
-                <Col >
+                <Col md={8} >
                     <Card className='product-details-card-style'>
-                        <Card.Img style={{ width: '24rem', margin: 'auto' }} variant="top" src={product.url} />
+                        <Card.Img style={{ width: '22rem', margin: 'auto' }} variant="top" src={product.url} />
                         <Card.Body>
                             <Card.Title style={{ color: 'green' }}>{product.title}</Card.Title>
                             <Card.Text>
@@ -61,6 +61,10 @@ const ProductDetails = () => {
                         </Card.Body>
                     </Card>
                 </Col >
+                <Col md={4}>
+                    {/* You can add banner image here for product details page */}
+                    <Image className='product-details-banner' src='https://i.ibb.co/KsR9mD8/Burger-Fast-Food-Restaurant-Banner.png' />
+                </Col>
             </Row>
         </Container>
     );

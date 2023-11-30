@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import FakeData from '../../FakeDataBase/FakeDataBase'
 import Products from '../Products/Products';
-import { Col, Container, Nav, Row } from 'react-bootstrap';
+import { Carousel, Col, Container, Nav, Row } from 'react-bootstrap';
+import HomePageCarousel from '../Home/HomePageCarousel';
 
 
 const Shop = () => {
@@ -15,8 +16,9 @@ const Shop = () => {
     return (
         <Container style={{ marginBottom: '50px' }}>
             <Row>
+                {/* Home Page Carousel */}
+                <HomePageCarousel></HomePageCarousel>
                 
- 
                 {products.map(product => {
                     return (
                         //Products Coming Here from Products Component

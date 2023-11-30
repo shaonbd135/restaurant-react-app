@@ -8,7 +8,7 @@ const NotFound = () => {
 
         <div style={{ minHeight: '100vh' }}>
             <Card style={{ width: '30rem' }} className="text-center m-auto mt-5">
-                <Card.Img variant="top" src="https://media.licdn.com/dms/image/C5612AQEPYce5KpNLyg/article-cover_image-shrink_720_1280/0/1551659700811?e=2147483647&v=beta&t=O9mBMiF-V12jCRJwaBNDWLKNL8cku2QSoCXtKP3vCHg" />
+                <Card.Img variant="top" src="https://i.ibb.co/SybKLyP/3828541.jpg" /> {/* You can change image here for page not found */}
                 <Card.Header>404 Error</Card.Header>
                 <Card.Body>
                     <Card.Title style={{ color: 'red' }}>Page Not Found</Card.Title>

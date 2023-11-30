@@ -1,3 +1,8 @@
+.product-details-container{
+    min-height: 100vh;
+}
+
+
 .product-details-card-style{
     border: none !important;
     box-shadow: 5px 5px 10px gray;
@@ -13,5 +18,11 @@
     margin: auto;
     margin-top: 50px;
     
+}
+
+.product-details-banner{
+    
+    margin-top: 50px;
+    width: 100%;
 }
 

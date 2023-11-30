@@ -1,86 +1,129 @@
-import React from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
-import { Facebook, Google, Instagram, Twitter } from "react-bootstrap-icons";
+import React, { useState } from 'react';
+import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import './Login.css';
 
 const Login = () => {
+    const [signupFormData, setSignupFormData] = useState({
+        fullName: '',
+        email: '',
+        password: '',
+    });
 
-    const signUpBtn = () => {
-        const container = document.querySelector('.login-container');
-        container.classList.add('active');
-    }
+    const [signinFormData, setSigninFormData] = useState({
+        email: '',
+        password: '',
+    });
 
-    const signInBtn = () => {
-        const container = document.querySelector('.login-container');
-        container.classList.remove('active');
-    }
+    const handleSignupChange = (e) => {
+        setSignupFormData({
+            ...signupFormData,
+            [e.target.name]: e.target.value,
+        });
+    };
 
+    const handleSigninChange = (e) => {
+        setSigninFormData({
+            ...signinFormData,
+            [e.target.name]: e.target.value,
+        });
+    };
+
+    const handleSignupSubmit = (e) => {
+        e.preventDefault();
+        //You can Add your signup logic here
+        console.log('Signup Form submitted:', signupFormData);
+    };
+
+    const handleSigninSubmit = (e) => {
+        e.preventDefault();
+        // You can Add your signin logic here
+        console.log('Signin Form submitted:', signinFormData);
+    };
 
     return (
-        <Container fluid >
-            <Row>
+        <div className='login-body'>
 
-                <Col className='login-body'>
-                    <div className='login-container' id='container'>
-                        <div className='form-container sign-up'>
+            <Container className="py-5">
+                <Row className='m-auto'>
+                    <Col md={6} className="mb-4">
+                        <div className="bg-light p-4 rounded signup-style">
+                            <h2 className="mb-4">Sign Up</h2>
+                            <Form onSubmit={handleSignupSubmit}>
+                                <Form.Group controlId="fullName">
+                                    <Form.Label>Full Name</Form.Label>
+                                    <Form.Control
+                                        type="text"
+                                        name="fullName"
+                                        value={signupFormData.fullName}
+                                        onChange={handleSignupChange}
+                                        required
+                                    />
+                                </Form.Group>
 
-                            <form>
-                                <h1>Create Account</h1>
-                                <div className='social-icons'>
-                                    <a href="#" className='icon'> <Google /></a>
-                                    <a href="#" className='icon'> <Facebook /></a>
-                                    <a href="#" className='icon'> <Instagram /></a>
-                                    <a href="#" className='icon'> <Twitter /></a>
-                                </div>
-                                <span>or use your email for registration</span>
-                                <input type="text" placeholder='Name' />
-                                <input type="text" placeholder='Email' />
-                                <input type="text" placeholder='Password' />
-                                <button>Sign Up</button>
-                            </form>
+                                <Form.Group controlId="email">
+                                    <Form.Label>Email</Form.Label>
+                                    <Form.Control
+                                        type="email"
+                                        name="email"
+                                        value={signupFormData.email}
+                                        onChange={handleSignupChange}
+                                        required
+                                    />
+                                </Form.Group>
 
+                                <Form.Group controlId="password">
+                                    <Form.Label>Password</Form.Label>
+                                    <Form.Control
+                                        type="password"
+                                        name="password"
+                                        value={signupFormData.password}
+                                        onChange={handleSignupChange}
+                                        required
+                                    />
+                                </Form.Group>
+
+                                <Button variant="success" className="mt-3" type="submit">
+                                    Sign Up
+                                </Button>
+                            </Form>
                         </div>
-                        <div className='form-container sign-in'>
+                    </Col>
 
-                            <form>
-                                <h1>Sign In</h1>
-                                <div className='social-icons'>
-                                    <a href="#" className='icon'> <Google /></a>
-                                    <a href="#" className='icon'> <Facebook /></a>
-                                    <a href="#" className='icon'> <Instagram /></a>
-                                    <a href="#" className='icon'> <Twitter /></a>
-                                </div>
-                                <span>or use your email and password for sign in</span>
-                                <input type="text" placeholder='Email' />
-                                <input type="text" placeholder='Password' />
-                                <a href="#">Forget Your Password?</a>
-                                <button >Sign in</button>
-                            </form>
+                    <Col md={6} className="mb-4">
+                        <div className="bg-light p-4 rounded signin-style">
+                            <h2 className="mb-4">Sign In</h2>
+                            <Form onSubmit={handleSigninSubmit}>
+                                <Form.Group controlId="email">
+                                    <Form.Label>Email</Form.Label>
+                                    <Form.Control
+                                        type="email"
+                                        name="email"
+                                        value={signinFormData.email}
+                                        onChange={handleSigninChange}
+                                        required
+                                    />
+                                </Form.Group>
 
+                                <Form.Group controlId="password">
+                                    <Form.Label>Password</Form.Label>
+                                    <Form.Control
+                                        type="password"
+                                        name="password"
+                                        value={signinFormData.password}
+                                        onChange={handleSigninChange}
+                                        required
+                                    />
+                                </Form.Group>
+
+                                <Button variant="success" type="submit" className="mt-3">
+                                    Sign In
+                                </Button>
+                            </Form>
                         </div>
-                        <div className="toggle-container">
-
-                            <div className="toggle">
-                                <div className="toggle-panel toggle-left">
-                                    <h1>Welcome Back!</h1>
-                                    <p>To keep connected with us please login with your personal info</p>
-                                    <button className="hidden" onClick={signInBtn} >Sign In</button>
-
-                                </div>
-                                <div className="toggle-panel toggle-right">
-                                    <h1>Hello!</h1>
-                                    <p>Enter your personal details and start journey with us</p>
-                                    <button className="hidden" onClick={signUpBtn} >Sign Up</button>
-
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </Col>
-
-            </Row>
-        </Container>
+                    </Col>
+                </Row>
+            </Container>
+        </div>
     );
 };
 

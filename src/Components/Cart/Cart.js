@@ -9,7 +9,7 @@ import { CreditCard } from 'react-bootstrap-icons';
 
 const Cart = () => {
 
-    const navigator = useNavigate();
+    const navigator = useNavigate(); // for redirecting
 
     // Remove product from cart
 
@@ -97,6 +97,7 @@ const Cart = () => {
             {cartItems ? (
                 <Container className='cart-container'>
                     <Row>
+                        {/* Cart Items Design coming here from CartDesign component */}
                         <Col md={8} >
                             {
                                 cart.map(product =>
